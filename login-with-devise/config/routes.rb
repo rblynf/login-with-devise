@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   resources :lists
+  #api
+  mount ApplicationAPI => '/api'
+  mount GrapeSwaggerRails::Engine => '/api_docs'
 end

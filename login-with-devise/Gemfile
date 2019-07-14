@@ -10,6 +10,14 @@ gem 'mysql2'
 
 gem 'devise'
 
+#api gem
+gem 'grape', '0.10.0'  
+gem 'grape-swagger', '0.9.0'
+gem 'grape-swagger-rails'
+
+#search
+gem 'ransack'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
