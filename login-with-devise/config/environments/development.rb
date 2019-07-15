@@ -7,7 +7,30 @@ Rails.application.configure do
   config.cache_classes = false
 
   # add ly
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  # config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  #add ly
+  config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.default_charset = "utf-8"
+  config.action_mailer.default :charset => "utf-8"
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.aliyun.com',
+    port:                 25,
+    domain:               'aliyun.com',
+    user_name:            'lyliyun3@aliyun.com',
+    password:             'liyun3',
+    authentication:       :login,
+    # enable_starttls_auto: true,
+    # openssl_verify_mode: 'none',
+    # ssl: true,
+    # openssl_verify_mode: OpenSSL::SSL::VERIFY_NONE
+  }
+  # config.action_mailer.default_options = {
+  #     from: "13306507435@163.com"
+  #   }
 
   # Do not eager load code on boot.
   config.eager_load = false

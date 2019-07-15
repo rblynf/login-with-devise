@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   #api
   mount ApplicationAPI => '/api'
   mount GrapeSwaggerRails::Engine => '/api_docs'
+
+  #sidekiq
+  require 'sidekiq/web'
+  mount Sidekiq::Web, at: '/sidekiq'
 end
