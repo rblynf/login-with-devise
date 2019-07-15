@@ -21,16 +21,9 @@ Rails.application.configure do
     port:                 25,
     domain:               'aliyun.com',
     user_name:            'lyliyun3@aliyun.com',
-    password:             'liyun3',
-    authentication:       :login,
-    # enable_starttls_auto: true,
-    # openssl_verify_mode: 'none',
-    # ssl: true,
-    # openssl_verify_mode: OpenSSL::SSL::VERIFY_NONE
+    password:             '******',
+    authentication:       :login
   }
-  # config.action_mailer.default_options = {
-  #     from: "13306507435@163.com"
-  #   }
 
   # Do not eager load code on boot.
   config.eager_load = false
