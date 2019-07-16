@@ -8,7 +8,9 @@ gem 'rails', '~> 5.2.3'
 # Use sqlite3 as the database for Active Record
 gem 'mysql2'
 
+#login 
 gem 'devise'
+gem 'devise-async'
 
 #api gem
 gem 'grape', '0.10.0'  

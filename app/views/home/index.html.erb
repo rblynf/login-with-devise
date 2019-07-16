@@ -1,4 +1,6 @@
 <h1>Home#index</h1>
+<a>当前用户: </a>  <%= current_user.name %>
+
 <p>Find me in app/views/home/index.html.erb</p>
 <% if current_user.admin? %>
   <%= link_to "Lists", lists_path %>
