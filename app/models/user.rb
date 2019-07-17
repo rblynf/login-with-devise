@@ -4,7 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :async
 
-  after_create :send_email
+  # after_create :send_email  #若send_email出现异常，因为还未commit因此会出现回滚，user对象未保存成功。
+  after_create_commit :send_email #send_email出现异常也不会回滚
 
   def admin?
     self.role == "admin"
