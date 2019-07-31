@@ -14,7 +14,7 @@ default: &default
 development:
   <<: *default
   database: lyfeng_development
-  host: 192.168.12.138
+  host: localhost
   username: root
   password: admin
   pool: 5
