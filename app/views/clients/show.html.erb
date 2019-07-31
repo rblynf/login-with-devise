@@ -9,6 +9,7 @@
   <strong>Sex:</strong>
   <%= @client.sex %>
 </p>
-
-<%= link_to 'Edit', edit_client_path(@client) %> |
+<% if can? :update, @client %>
+	<%= link_to 'Edit', edit_client_path(@client) %> |
+<% end %>
 <%= link_to 'Back', clients_path %>

@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 	end
 
 	def authenticate_client
-    unless current_user.client?
+    if !current_user.client? && !current_user.client_manage?
       # flash[:alert] = "Not allow!"
       redirect_to root_path
     end

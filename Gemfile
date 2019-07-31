@@ -24,6 +24,8 @@ gem 'ransack'
 gem 'sidekiq'
 # gem 'sinatra', require: false
 
+gem 'cancan'
+gem 'rolify'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'

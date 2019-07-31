@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  rolify
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -15,7 +16,12 @@ class User < ApplicationRecord
 		self.role == "client"
   end
 
+  def client_manage?
+    self.role == "client_manage"
+  end
+
   def send_email
     UserMailer.welcome_email(self).deliver_later
   end
+
 end

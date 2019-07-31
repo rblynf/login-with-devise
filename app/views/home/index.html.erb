@@ -4,10 +4,9 @@
 <p>Find me in app/views/home/index.html.erb</p>
 <% if current_user.admin? %>
   <%= link_to "Lists", lists_path %>
-  <% elsif current_user.client? %>
+<%-# elsif current_user.client?  -%>
+<% else %>
   <%= link_to "Client", clients_path %>
-  <% else %>
-  <% root_path %>
 <% end %>
 
 </br>
