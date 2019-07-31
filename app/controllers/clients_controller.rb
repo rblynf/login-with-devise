@@ -7,6 +7,8 @@ class ClientsController < ApplicationController
   # GET /clients
   # GET /clients.json
   def index
+    # a = '222'
+    # binding.pry
     @clients = Client.all
   end
 
