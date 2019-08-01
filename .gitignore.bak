@@ -1,0 +1,5 @@
+*.log
+/tmp
+/test
+/vendor
+/app/assets/javascripts
