@@ -12,4 +12,12 @@ Rails.application.routes.draw do
   #sidekiq
   require 'sidekiq/web'
   mount Sidekiq::Web, at: '/sidekiq'
+
+  
+  # resources :chat_rooms, only: [:new, :create, :show, :index]
+  # root 'chat_rooms#index'
+
+  # #cable
+  # mount ActionCable.server => '/cable'
+
 end
