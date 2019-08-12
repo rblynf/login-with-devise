@@ -14,10 +14,10 @@ Rails.application.routes.draw do
   mount Sidekiq::Web, at: '/sidekiq'
 
   
-  # resources :chat_rooms, only: [:new, :create, :show, :index]
+  resources :chat_rooms, only: [:new, :create, :show, :index]
   # root 'chat_rooms#index'
 
-  # #cable
-  # mount ActionCable.server => '/cable'
+  #cable
+  mount ActionCable.server => '/cable'
 
 end

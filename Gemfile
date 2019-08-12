@@ -31,7 +31,7 @@ gem 'webpacker'
 
 gem 'bootstrap'
 
-
+gem 'mini_racer', platforms: :ruby  #解决Autoprefixer doesn’t support Node v4.2问题
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
