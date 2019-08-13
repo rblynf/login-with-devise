@@ -1,11 +1,12 @@
 :verbose: false
-:concurrency: 5 # 并发数
+:concurrency: 10 # 并发数
 :pidfile: ./tmp/pids/sidekiq.pid
 :logfile: ./log/sidekiq.log # 输出的日志地址
 :timeout: 30
 :queues:
   - default    # 写在队列参数中的, 表示让 sidekiq 处理这个 queue
-  - [mailers, 100]
+  - [mailers, 3]
+  - [schedule_test_ly, 4]
   # - [HardWorker, 2] # 使用数组的形式写, 第一个参数为打开的 queue 的名称, 第二个为优先级
   # - [EmailWorker, 3]
   # - [PasswordWorker, 4]

@@ -1,0 +1,7 @@
+schedule_test_job:
+  description: "test job every 1 min"
+  cron: "*/1 * * * *"
+  class: "ScheduleTestJob"
+  queue: schedule_test_ly
+  args:
+  active_job: true

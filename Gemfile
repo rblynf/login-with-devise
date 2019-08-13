@@ -22,7 +22,7 @@ gem 'ransack'
 
 #sidekiq
 gem 'sidekiq'
-# gem 'sinatra', require: false
+gem "sidekiq-cron"  #, "~> 0.4.0"
 
 gem 'cancan'
 gem 'rolify'
