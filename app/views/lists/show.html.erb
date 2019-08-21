@@ -15,5 +15,12 @@
   <%= @list.phone %>
 </p>
 
+<p>
+  <% if @list.atfile.attached? %>
+	  <strong>atfile:</strong>
+	  <%=image_tag url_for(@list.atfile)%>
+  <%end%>
+</p>
+
 <%= link_to 'Edit', edit_list_path(@list) %> |
 <%= link_to 'Back', lists_path %>
