@@ -43,6 +43,7 @@ class ListsController < ApplicationController
   # PATCH/PUT /lists/1
   # PATCH/PUT /lists/1.json
   def update
+    @list.atfile.attach(params[:list][:atfile]) if params[:list][:atfile].present?
     respond_to do |format|
       if @list.update(list_params)
         format.html { redirect_to @list, notice: 'List was successfully updated.' }

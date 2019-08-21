@@ -18,7 +18,7 @@
 <p>
   <% if @list.atfile.attached? %>
 	  <strong>atfile:</strong>
-	  <%=image_tag url_for(@list.atfile)%>
+	  <%=image_tag url_for(@list.atfile), size: "136x136"%>
   <%end%>
 </p>
 
